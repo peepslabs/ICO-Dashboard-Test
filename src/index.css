@@ -2,3 +2,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .btn-disabled,
+  .btn-disabled:hover,
+  .btn[disabled],
+  .btn[disabled]:hover {
+    max-height: 0;
+    max-width: 0;
+    visibility: hidden;
+  }
+}
+
+@layer components {
+  .btn-disabled,
+  .btn-disabled:hover,
+  .btn[disabled],
+  .btn[disabled]:hover {
+    max-height: 0;
+    max-width: 0;
+    visibility: hidden;
+  }
+}
+
+@layer utilities {
+  .btn-disabled,
+  .btn-disabled:hover,
+  .btn[disabled],
+  .btn[disabled]:hover {
+    max-height: 0;
+    max-width: 0;
+    visibility: hidden;
+  }
+}
