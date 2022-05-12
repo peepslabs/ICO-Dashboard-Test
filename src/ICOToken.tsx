@@ -27,7 +27,7 @@ const crowdsaleAddress = import.meta.env.VITE_CROWDSALE_ADDRESS;
 const TokenInfo = ({ crowdsaleAddress }: { crowdsaleAddress: string }) => {
 
   console.log("addresssss",crowdsaleAddress,crowdsaleAddress);
-  
+
   const { library } = useWeb3React();
 
   const fetchTokenInfo = async () => {
@@ -39,7 +39,7 @@ const TokenInfo = ({ crowdsaleAddress }: { crowdsaleAddress: string }) => {
     const decimals = await tokenContract.decimals();
     const totalSupply = await tokenContract.totalSupply();
     console.log("totalsupply",totalSupply.toString());
-    
+
     logger.warn("token info", { crowdsaleAddress,name, symbol, decimals });
     return {
       name,
@@ -97,7 +97,7 @@ const ICOToken = ({ crowdsaleAddress }: Props) => {
     let _tSupply = Number(formatEther(BigNumber.from(totalSupply.toString()))) ;
     let c_supply = Number(formatEther(BigNumber.from(currentSupply.toString())));
     let availableSupply = _tSupply-c_supply;
-    
+
     setAvailableForSale(availableSupply.toString());
     await tokenContract.rate()
       .then((rate) => setPrice(BigNumber.from(rate).toString()))
@@ -144,7 +144,7 @@ const ICOToken = ({ crowdsaleAddress }: Props) => {
 
   const totalCosts = (Number(price)) * amount;
   const totalCost = formatEther((BigNumber.from(totalCosts.toString()).toString()));
-  
+
   return (
     <div className="relative py-3 sm:max-w-5xl sm:mx-auto">
       {chainId !== 3 && (
@@ -236,11 +236,21 @@ const ICOToken = ({ crowdsaleAddress }: Props) => {
         <div className="divider"></div>
 
         <div className="items-center justify-center max-w-2xl px-4 py-4 mx-auto text-xl border-orange-500 lg:flex md:flex">
+        <div className="p-2 font-semibold">
+          <a
+            href={`https://github.com/bitwebs/whitepaper`}
+            target="_blank"
+            className="px-4 py-1 ml-2 text-white bg-accent rounded-full shadow focus:outline-none"
+            rel="noreferrer"
+          >
+            Read Whitepaper
+          </a>
+        </div>
           <div className="p-2 font-semibold">
             <a
               href={`https://ropsten.etherscan.io/address/${crowdsaleAddress}`}
               target="_blank"
-              className="px-4 py-1 ml-2 text-white bg-orange-500 rounded-full shadow focus:outline-none"
+              className="px-4 py-1 ml-2 text-white bg-accent rounded-full shadow focus:outline-none"
               rel="noreferrer"
             >
               View Token on Etherscan

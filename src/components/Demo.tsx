@@ -79,7 +79,7 @@ export default function Demo() {
         <div>
           {(active || error) && (
             <button
-              className="btn btn-secondary"
+              className="btn btn-outline"
               onClick={() => {
                 deactivate();
               }}
