@@ -14,7 +14,7 @@ import { Header } from "./Header";
 
 function getErrorMessage(error: Error) {
   if (error instanceof NoEthereumProviderError) {
-    return "No Ethereum browser extension detected, install MetaMask on desktop or visit from a dApp browser on mobile.";
+    return "No Ethereum browser extension detected, install MetaMask on PC or visit from a dApp browser on mobile.";
   } else if (error instanceof UnsupportedChainIdError) {
     return "You're connected to an unsupported network.";
   } else if (
@@ -24,7 +24,7 @@ function getErrorMessage(error: Error) {
     return "Please authorize this website to access your Ethereum account.";
   } else {
     logger.error(error);
-    return "An unknown error occurred. Check the console for more details.";
+    return "An unknown error occurred. Please refresh the page.";
   }
 }
 
@@ -59,7 +59,7 @@ export default function Demo() {
     <Header>
       <div className="flex flex-row w-full ml-4 mr-4">
         <button
-          className="btn btn-primary"
+          className="btn btn-outline btn-accent"
           disabled={disabled}
           onClick={() => {
             setActivatingConnector(injected);
@@ -79,7 +79,7 @@ export default function Demo() {
         <div>
           {(active || error) && (
             <button
-              className="btn btn-outline"
+              className="btn btn-outline btn-accent"
               onClick={() => {
                 deactivate();
               }}

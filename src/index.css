@@ -65,3 +65,42 @@
     --tw-bg-opacity: 0.2;
   }
 }
+
+@layer base {
+  :root {
+    --b9: 0 0% 0%;
+  }
+}
+
+@layer components {
+  :root {
+    --b9: 0 0% 0%;
+  }
+}
+
+@layer utilities {
+  :root {
+    --b9: 0 0% 0%;
+  }
+}
+
+@layer base {
+  :root,
+  [data-theme] {
+    background-color: hsla(var(--b9) / var(--tw-bg-opacity, 1));
+  }
+}
+
+@layer components {
+  :root,
+  [data-theme] {
+    background-color: hsla(var(--b9) / var(--tw-bg-opacity, 1));
+  }
+}
+
+@layer utilities {
+  :root,
+  [data-theme] {
+    background-color: hsla(var(--b9) / var(--tw-bg-opacity, 1));
+  }
+}

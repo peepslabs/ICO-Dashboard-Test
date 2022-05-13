@@ -149,22 +149,8 @@ const ICOToken = ({ crowdsaleAddress }: Props) => {
     <div className="relative py-3 sm:max-w-5xl sm:mx-auto">
       {chainId !== 3 && (
         <>
-          <div className="alert">
+          <div className="alert flex flex-col">
             <div className="flex-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="#ff5722"
-                className="w-6 h-6 mx-2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                />
-              </svg>
               <label>Please connect to the Ropsten testnet for testing.</label>
             </div>
           </div>
@@ -235,12 +221,12 @@ const ICOToken = ({ crowdsaleAddress }: Props) => {
 
         <div className="divider"></div>
 
-        <div className="items-center justify-center max-w-2xl px-4 py-4 mx-auto text-xl border-orange-500 lg:flex md:flex">
+        <div className="items-center justify-center max-w-2xl px-4 py-4 mx-auto text-xl lg:flex md:flex">
         <div className="p-2 font-semibold">
           <a
             href={`https://github.com/bitwebs/whitepaper`}
             target="_blank"
-            className="px-4 py-1 ml-2 text-white bg-accent rounded-full shadow focus:outline-none"
+            className="px-4 py-1 ml-2 text-white bg-accent-focus rounded-full shadow focus:outline-none"
             rel="noreferrer"
           >
             Read Whitepaper
@@ -250,7 +236,7 @@ const ICOToken = ({ crowdsaleAddress }: Props) => {
             <a
               href={`https://ropsten.etherscan.io/address/${crowdsaleAddress}`}
               target="_blank"
-              className="px-4 py-1 ml-2 text-white bg-accent rounded-full shadow focus:outline-none"
+              className="px-4 py-1 ml-2 text-white bg-accent-focus rounded-full shadow focus:outline-none"
               rel="noreferrer"
             >
               View Token on Etherscan
