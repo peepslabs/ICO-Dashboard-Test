@@ -149,7 +149,7 @@ const ICOToken = ({ crowdsaleAddress }: Props) => {
     <div className="relative py-3 sm:max-w-5xl sm:mx-auto">
       {chainId !== 3 && (
         <>
-          <div className="alert flex flex-col">
+          <div className="alert flex flex-col bg-base-200">
             <div className="flex-1">
               <label>Please connect to the Ropsten testnet for testing.</label>
             </div>
