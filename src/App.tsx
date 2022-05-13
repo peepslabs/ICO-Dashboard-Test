@@ -19,7 +19,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <div className="App">
           <Demo />
-          <ICOToken crowdsaleAddress={crowdsaleAddress} />          
+          <ICOToken crowdsaleAddress={crowdsaleAddress} />
         </div>
         <Toaster position="top-right" />
       </QueryClientProvider>
