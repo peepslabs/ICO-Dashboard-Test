@@ -47,3 +47,21 @@
     border: 0;
   }
 }
+
+@layer base {
+  .bg-base-200 {
+    --tw-bg-opacity: 0.2;
+  }
+}
+
+@layer components {
+  .bg-base-200 {
+    --tw-bg-opacity: 0.2;
+  }
+}
+
+@layer utilities {
+  .bg-base-200 {
+    --tw-bg-opacity: 0.2;
+  }
+}

@@ -17,3 +17,4 @@ coverage
 dist (copy to js folder after build)/css/starfield.css
 dist (copy to js folder after build)/js/jquery.min.js
 dist (copy to js folder after build)/js/starfield.js
+dist (copy to js folder after build)/add to index.html
